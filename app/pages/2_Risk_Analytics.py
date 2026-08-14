@@ -16,6 +16,45 @@ st.set_page_config(
 
 
 # ==================================================
+# CUSTOM KPI CARD STYLE
+# ==================================================
+
+st.markdown(
+    """
+    <style>
+
+    .risk-kpi-card {
+        padding: 24px 20px;
+        border-radius: 14px;
+        border: 1px solid #3a3d45;
+        background-color: #16191f;
+        text-align: center;
+        min-height: 145px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    .risk-kpi-title {
+        font-size: 16px;
+        color: #b8b8b8;
+        margin-bottom: 12px;
+    }
+
+    .risk-kpi-value {
+        font-size: 32px;
+        font-weight: 700;
+        color: #ffffff;
+    }
+
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
+# ==================================================
 # HEADER
 # ==================================================
 
@@ -46,7 +85,7 @@ df = load_data()
 
 
 # ==================================================
-# SHOW AVAILABLE DATA
+# RISK FILTERS
 # ==================================================
 
 st.sidebar.header("🔎 Risk Filters")
@@ -74,7 +113,7 @@ else:
 
 
 # ==================================================
-# APPLY GRADE FILTER
+# APPLY FILTER
 # ==================================================
 
 filtered_df = df.copy()
@@ -127,35 +166,75 @@ col1, col2, col3, col4 = st.columns(4)
 
 with col1:
 
-    st.metric(
-        "Filtered Loans",
-        f"{total_filtered:,}"
+    st.markdown(
+        f"""
+        <div class="risk-kpi-card">
+            <div class="risk-kpi-title">
+                Filtered Loans
+            </div>
+            <div class="risk-kpi-value">
+                {total_filtered:,}
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True
     )
 
 
 with col2:
 
-    st.metric(
-        "Defaulted Loans",
-        f"{defaulted_filtered:,}"
+    st.markdown(
+        f"""
+        <div class="risk-kpi-card">
+            <div class="risk-kpi-title">
+                Defaulted Loans
+            </div>
+            <div class="risk-kpi-value">
+                {defaulted_filtered:,}
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True
     )
 
 
 with col3:
 
-    st.metric(
-        "Default Rate",
-        f"{filtered_default_rate:.2f}%"
+    st.markdown(
+        f"""
+        <div class="risk-kpi-card">
+            <div class="risk-kpi-title">
+                Default Rate
+            </div>
+            <div class="risk-kpi-value">
+                {filtered_default_rate:.2f}%
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True
     )
 
 
 with col4:
 
-    st.metric(
-        "Average Annual Income",
-        f"${avg_income:,.0f}"
+    st.markdown(
+        f"""
+        <div class="risk-kpi-card">
+            <div class="risk-kpi-title">
+                Average Annual Income
+            </div>
+            <div class="risk-kpi-value">
+                ${avg_income:,.0f}
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True
     )
 
+
+# ==================================================
+# DIVIDER
+# ==================================================
 
 st.divider()
 
