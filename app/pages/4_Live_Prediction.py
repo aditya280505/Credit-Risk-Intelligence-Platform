@@ -1,9 +1,6 @@
-
 import streamlit as st
 import pandas as pd
-import numpy as np
 import joblib
-
 from pathlib import Path
 
 
@@ -38,13 +35,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 MODEL_DIR = BASE_DIR / "models"
 
-DATA_PATH = (
-    BASE_DIR
-    / "data"
-    / "processed"
-    / "loan_feature_engineered.csv"
-)
-
 
 # ==================================================
 # LOAD MODEL + SCALER
@@ -75,37 +65,51 @@ except Exception as e:
 
 
 # ==================================================
-# LOAD DATASET FOR FEATURE STRUCTURE
-# ==================================================
-
-@st.cache_data
-def load_data():
-
-    return pd.read_csv(DATA_PATH)
-
-
-try:
-
-    df = load_data()
-
-except Exception as e:
-
-    st.error("❌ Could not load processed dataset.")
-
-    st.code(str(e))
-
-    st.stop()
-
-
-# ==================================================
 # GET TRAINING FEATURE NAMES
 # ==================================================
 
-FEATURE_COLUMNS = [
-    column
-    for column in df.columns
-    if column != "default"
-]
+if hasattr(scaler, "feature_names_in_"):
+
+    FEATURE_COLUMNS = list(
+        scaler.feature_names_in_
+    )
+
+elif hasattr(xgb_model, "feature_names_in_"):
+
+    FEATURE_COLUMNS = list(
+        xgb_model.feature_names_in_
+    )
+
+elif hasattr(xgb_model, "get_booster"):
+
+    booster_features = (
+        xgb_model
+        .get_booster()
+        .feature_names
+    )
+
+    if booster_features:
+
+        FEATURE_COLUMNS = list(
+            booster_features
+        )
+
+    else:
+
+        st.error(
+            "❌ Training feature names are not available "
+            "inside the saved model."
+        )
+
+        st.stop()
+
+else:
+
+    st.error(
+        "❌ Could not determine training feature names."
+    )
+
+    st.stop()
 
 
 # ==================================================
@@ -152,6 +156,10 @@ with col3:
         step=0.1
     )
 
+
+# ==================================================
+# FINANCIAL INFORMATION
+# ==================================================
 
 col1, col2, col3 = st.columns(3)
 
@@ -244,6 +252,10 @@ with col3:
     )
 
 
+# ==================================================
+# BORROWER INFORMATION
+# ==================================================
+
 col1, col2, col3 = st.columns(3)
 
 
@@ -284,6 +296,10 @@ with col3:
     )
 
 
+# ==================================================
+# LOAN PURPOSE
+# ==================================================
+
 purpose = st.selectbox(
     "Loan Purpose",
     [
@@ -305,7 +321,7 @@ purpose = st.selectbox(
 
 
 # ==================================================
-# ADDITIONAL FINANCIAL INFORMATION
+# CREDIT PROFILE
 # ==================================================
 
 st.divider()
@@ -410,6 +426,7 @@ if predict_button:
 
     input_data = {}
 
+
     # ------------------------------------------------
     # Numerical Features
     # ------------------------------------------------
@@ -457,6 +474,7 @@ if predict_button:
     # ------------------------------------------------
 
     grade_map = {
+
         "A": 1,
         "B": 2,
         "C": 3,
@@ -464,11 +482,10 @@ if predict_button:
         "E": 5,
         "F": 6,
         "G": 7
+
     }
 
-    input_data["grade"] = grade_map[
-        grade
-    ]
+    input_data["grade"] = grade_map[grade]
 
 
     # ------------------------------------------------
@@ -497,15 +514,16 @@ if predict_button:
 
         "G1": 31, "G2": 32, "G3": 33,
         "G4": 34, "G5": 35
+
     }
 
-    input_data["sub_grade"] = sub_grade_map[
-        sub_grade
-    ]
+    input_data["sub_grade"] = (
+        sub_grade_map[sub_grade]
+    )
 
 
     # ------------------------------------------------
-    # One-Hot Features
+    # Initialize all training features
     # ------------------------------------------------
 
     for column in FEATURE_COLUMNS:
@@ -515,7 +533,10 @@ if predict_button:
             input_data[column] = 0
 
 
+    # ------------------------------------------------
     # Home Ownership
+    # ------------------------------------------------
+
     home_column = (
         "home_ownership_"
         + home_ownership
@@ -526,7 +547,10 @@ if predict_button:
         input_data[home_column] = 1
 
 
+    # ------------------------------------------------
     # Verification Status
+    # ------------------------------------------------
+
     if verification_status == "Source Verified":
 
         column = (
@@ -549,7 +573,10 @@ if predict_button:
             input_data[column] = 1
 
 
+    # ------------------------------------------------
     # Purpose
+    # ------------------------------------------------
+
     purpose_column = (
         "purpose_"
         + purpose
@@ -560,7 +587,10 @@ if predict_button:
         input_data[purpose_column] = 1
 
 
+    # ------------------------------------------------
     # Application Type
+    # ------------------------------------------------
+
     if application_type == "Joint App":
 
         column = (
@@ -577,25 +607,22 @@ if predict_button:
     # ------------------------------------------------
 
     input_data["loan_to_income"] = (
-        loan_amnt / max(
-            annual_inc,
-            1
-        )
+        loan_amnt /
+        max(annual_inc, 1)
     )
+
 
     input_data["installment_to_income"] = (
-        installment / max(
-            annual_inc / 12,
-            1
-        )
+        installment /
+        max(annual_inc / 12, 1)
     )
 
+
     input_data["open_to_total_accounts"] = (
-        open_acc / max(
-            total_acc,
-            1
-        )
+        open_acc /
+        max(total_acc, 1)
     )
+
 
     input_data["credit_issue_count"] = (
         delinq_2yrs
@@ -603,11 +630,10 @@ if predict_button:
         + pub_rec
     )
 
+
     input_data["revol_bal_to_income"] = (
-        revol_bal / max(
-            annual_inc,
-            1
-        )
+        revol_bal /
+        max(annual_inc, 1)
     )
 
 
@@ -620,7 +646,10 @@ if predict_button:
     )
 
 
+    # ------------------------------------------------
     # Ensure exact feature order
+    # ------------------------------------------------
+
     input_df = input_df.reindex(
         columns=FEATURE_COLUMNS,
         fill_value=0
@@ -654,9 +683,10 @@ if predict_button:
 
     try:
 
-        probability = xgb_model.predict_proba(
-            input_scaled
-        )[0][1]
+        probability = (
+            xgb_model
+            .predict_proba(input_scaled)[0][1]
+        )
 
     except Exception as e:
 
@@ -687,6 +717,7 @@ if predict_button:
             "probability of default."
         )
 
+
     elif probability < 0.60:
 
         risk_level = "MEDIUM RISK"
@@ -695,6 +726,7 @@ if predict_button:
             "Applicant requires additional "
             "credit review."
         )
+
 
     else:
 
@@ -743,12 +775,14 @@ if predict_button:
             + recommendation
         )
 
+
     elif risk_level == "MEDIUM RISK":
 
         st.warning(
             f"🟡 **{risk_level}**\n\n"
             + recommendation
         )
+
 
     else:
 
@@ -766,6 +800,7 @@ if predict_button:
         "📊 Default Probability"
     )
 
+
     st.progress(
         float(probability)
     )
@@ -774,4 +809,3 @@ if predict_button:
     st.caption(
         "Probability estimated by the trained XGBoost model."
     )
-
