@@ -33,7 +33,7 @@ DATA_PATH = (
     BASE_DIR
     / "data"
     / "processed"
-    / "loan_feature_engineered.csv"
+    / "dashboard_data.csv"
 )
 
 
