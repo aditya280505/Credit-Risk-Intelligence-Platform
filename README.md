@@ -1,150 +1,217 @@
 # 🏦 Credit Risk Intelligence Platform
 
-🐍 **Python**   ◈   🤖 **Machine Learning**   ◈   ⚖️ **SMOTE**   ◈   🔍 **SHAP**   ◈   🚀 **Streamlit**   ◈   🗄️ **SQL**
+🐍 **Python**   ◈   🤖 **Machine Learning**   ◈   ⚖️ **SMOTE**   ◈   🔍 **SHAP**   ◈   📊 **Analytics**   ◈   🚀 **Streamlit**   ◈   🗄️ **SQL**
 
-**An end-to-end machine learning and analytics platform for analyzing loan default risk and supporting data-driven credit-risk decisions.**
+### An End-to-End Machine Learning & Analytics Platform for Credit-Risk Intelligence
 
-[![Live Demo](https://img.shields.io/badge/🚀-Live%20Demo-success?style=for-the-badge)](https://aditya280505-credit-risk-intelligence-platform-apphome-gqpygr.streamlit.app/)
-[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge\&logo=github)](https://github.com/aditya280505/Credit-Risk-Intelligence-Platform)
+The **Credit Risk Intelligence Platform** analyzes historical loan and borrower data, engineers financial-risk features, handles class imbalance, trains multiple classification models, evaluates their performance, explains predictions using SHAP, and delivers interactive credit-risk insights through Streamlit.
+
+[![🚀 Live Demo](https://img.shields.io/badge/🚀%20LIVE%20DEMO-success?style=for-the-badge)](https://aditya280505-credit-risk-intelligence-platform-apphome-gqpygr.streamlit.app/)
+[![💻 GitHub](https://img.shields.io/badge/💻%20GITHUB-Repository-black?style=for-the-badge\&logo=github)](https://github.com/aditya280505/Credit-Risk-Intelligence-Platform)
 [![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge\&logo=python)](https://www.python.org/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-App-red?style=for-the-badge\&logo=streamlit)](https://streamlit.io/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-red?style=for-the-badge\&logo=streamlit)](https://streamlit.io/)
+
+---
+
+# 📌 Project Highlights
+
+|                           | Highlight                                   |
+| ------------------------- | ------------------------------------------- |
+| 📚 **Dataset**            | ~1.3M processed loan records                |
+| 🔢 **Features**           | 93 modeling features                        |
+| 🎯 **Task**               | Binary loan-default classification          |
+| 🤖 **Models**             | Logistic Regression, Random Forest, XGBoost |
+| ⚖️ **Imbalance Handling** | SMOTE                                       |
+| 🔍 **Explainability**     | SHAP                                        |
+| 📊 **Dashboard**          | 4 interactive Streamlit sections            |
+| 🔮 **Prediction**         | Individual loan-risk prediction             |
+| 🗄️ **Analytics**         | SQL-based business analysis                 |
+| 🚀 **Deployment**         | Streamlit                                   |
 
 ---
 
 # 🚀 Live Demo
 
-### Explore the Interactive Credit Risk Dashboard
+## Explore the Interactive Credit-Risk Dashboard
 
 **Live Application:**
 https://aditya280505-credit-risk-intelligence-platform-apphome-gqpygr.streamlit.app/
 
-The application provides interactive credit-risk analytics, model performance comparison, explainable AI visualizations, and individual loan-risk prediction.
+The application provides:
+
+* Portfolio-level risk monitoring
+* Loan and borrower risk analytics
+* Machine-learning model comparison
+* SHAP-based explainability
+* Individual loan-risk prediction
+
+---
+
+# 💻 Repository
+
+**GitHub:**
+https://github.com/aditya280505/Credit-Risk-Intelligence-Platform
 
 ---
 
 # 📖 Overview
 
-**Credit Risk Intelligence Platform** is an end-to-end machine learning and analytics solution designed to analyze loan default risk and support data-driven credit decisions.
+Financial institutions process large volumes of loan applications and need effective methods to identify borrowers who may have a higher probability of default.
 
-The platform combines:
+This project demonstrates an **end-to-end Credit Risk Intelligence Platform** that combines:
 
-* Data Cleaning
-* Exploratory Data Analysis
+* Data Analytics
+* SQL
 * Feature Engineering
-* SQL Business Analysis
+* Machine Learning
 * Imbalanced Learning
-* Machine Learning Classification
 * Model Evaluation
-* Explainable AI using SHAP
-* Interactive Streamlit Dashboards
-* Individual Loan-Risk Prediction
+* Explainable AI
+* Interactive Visualization
+* Streamlit Deployment
 
-The system transforms historical loan-level data into actionable credit-risk insights and demonstrates how machine learning can support automated risk assessment.
+The platform transforms historical loan-level data into meaningful risk insights and machine-learning-based predictions.
 
 ---
 
 # 🎯 Problem Statement
 
-Financial institutions process a large number of loan applications and need reliable methods to identify applicants who may have a higher probability of default.
+Traditional credit-risk assessment can require significant manual analysis and may become difficult to scale as the number of applications increases.
 
-Traditional manual assessment can be:
+The objective of this project is to develop a data-driven system capable of:
 
-* Time-consuming
-* Difficult to scale
-* Dependent on manual analysis
-* Challenging when dealing with large datasets
-
-The objective of this project is to build a **Credit Risk Intelligence Platform** capable of analyzing borrower and loan characteristics, identifying risky patterns, predicting default risk, comparing machine learning models, and explaining model predictions.
+* Analyzing borrower and loan characteristics
+* Identifying patterns associated with loan defaults
+* Engineering meaningful financial-risk indicators
+* Handling imbalanced default classes
+* Training and comparing multiple ML models
+* Explaining model predictions
+* Providing portfolio-level risk analytics
+* Supporting individual loan-risk prediction
 
 ---
 
 # 💡 Proposed Solution
 
-The platform follows an end-to-end credit-risk analytics workflow:
+The platform follows a complete machine-learning and analytics pipeline:
 
 ```text
-Raw Loan Data
-      │
-      ▼
-Data Cleaning & Preprocessing
-      │
-      ▼
-Exploratory Data Analysis
-      │
-      ▼
-Feature Engineering
-      │
-      ▼
-Train / Test Split
-      │
-      ▼
-SMOTE Class Balancing
-      │
-      ▼
-Machine Learning Models
-      │
-      ▼
-Model Evaluation
-      │
-      ▼
-SHAP Explainability
-      │
-      ▼
-Streamlit Risk Dashboard
-      │
-      ▼
-Live Loan-Risk Prediction
+                    ┌─────────────────────┐
+                    │   LendingClub Data  │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │ Data Preprocessing  │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │ Exploratory Data    │
+                    │ Analysis            │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │ Feature Engineering │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │ Train / Test Split  │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │ SMOTE on Training   │
+                    │ Data                │
+                    └──────────┬──────────┘
+                               │
+                  ┌────────────┼────────────┐
+                  ▼            ▼            ▼
+             Logistic       Random        XGBoost
+             Regression      Forest
+                  │            │            │
+                  └────────────┼────────────┘
+                               ▼
+                    ┌─────────────────────┐
+                    │ Model Evaluation    │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │ SHAP Explainability │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │ Streamlit Dashboard │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │ Live Risk Prediction│
+                    └─────────────────────┘
 ```
 
 ---
 
 # ✨ Key Features
 
-### 📊 Executive Risk Dashboard
+## 📊 Executive Risk Dashboard
 
-Provides a portfolio-level overview of credit risk through:
+Provides a portfolio-level overview of credit risk.
 
-* Total Loans
-* Defaulted Loans
-* Default Rate
-* Average Loan Amount
-* Default Distribution
-* Grade-wise Default Analysis
-* Loan Amount Distribution
+Key KPIs include:
 
-### ⚠️ Risk Analytics
+* Total loans
+* Defaulted loans
+* Default rate
+* Average loan amount
+* Default distribution
+* Grade-wise default rate
+* Loan amount distribution
 
-Provides detailed analysis of borrower and loan characteristics associated with credit risk.
+---
 
-Key areas include:
+## ⚠️ Risk Analytics
 
-* Loan characteristics
-* Interest rates
-* Borrower income
+Provides deeper analysis of borrower and loan characteristics.
+
+The dashboard can be used to investigate relationships involving:
+
+* Loan amount
+* Interest rate
+* Annual income
 * Debt-to-income ratio
 * Credit inquiries
 * Delinquencies
+* Revolving balance
 * Revolving utilization
-* Credit account information
-* Risk patterns across loan grades
+* Credit accounts
+* Loan grades
 
-### 🤖 Model Performance
+---
 
-Compares multiple classification algorithms:
+## 🤖 Model Performance
 
-* Logistic Regression
-* Random Forest
-* XGBoost
+Compares three classification algorithms:
 
-Performance is evaluated using:
+1. Logistic Regression
+2. Random Forest
+3. XGBoost
+
+Evaluation metrics include:
 
 * Accuracy
 * F1 Score
 * ROC-AUC
 
-### 🔍 Explainable AI
+---
 
-SHAP is used to interpret machine learning predictions and understand the factors influencing model output.
+## 🔍 Explainable AI
+
+SHAP is used to understand the behavior of the machine-learning model.
 
 The project includes:
 
@@ -152,27 +219,43 @@ The project includes:
 * SHAP Summary Plot
 * SHAP Waterfall Plot
 
-### 🔮 Live Risk Prediction
+---
 
-Users can enter loan and borrower information through the Streamlit application and obtain a model-based credit-risk prediction.
+## 🔮 Live Risk Prediction
+
+The Streamlit application allows users to enter loan and borrower information and generate a model-based prediction.
+
+The prediction workflow is:
+
+```text
+Applicant Information
+        ↓
+Feature Processing
+        ↓
+Feature Scaling
+        ↓
+Trained ML Model
+        ↓
+Risk Prediction
+```
 
 ---
 
 # 🛠️ Tech Stack
 
-| Category            | Technologies              |
-| ------------------- | ------------------------- |
-| Programming         | Python                    |
-| Data Analysis       | Pandas, NumPy             |
-| Machine Learning    | Scikit-learn, XGBoost     |
-| Imbalanced Learning | imbalanced-learn, SMOTE   |
-| Explainable AI      | SHAP                      |
-| Visualization       | Plotly, Matplotlib        |
-| Dashboard           | Streamlit                 |
-| Model Persistence   | Joblib                    |
-| Database / Analysis | SQL                       |
-| Development         | Jupyter Notebook, VS Code |
-| Version Control     | Git, GitHub               |
+| Category             | Technologies              |
+| -------------------- | ------------------------- |
+| Programming          | Python                    |
+| Data Analysis        | Pandas, NumPy             |
+| Machine Learning     | Scikit-learn, XGBoost     |
+| Imbalanced Learning  | imbalanced-learn, SMOTE   |
+| Explainable AI       | SHAP                      |
+| Visualization        | Plotly, Matplotlib        |
+| Dashboard            | Streamlit                 |
+| Model Persistence    | Joblib                    |
+| Database / Analytics | SQL                       |
+| Development          | Jupyter Notebook, VS Code |
+| Version Control      | Git, GitHub               |
 
 ---
 
@@ -251,7 +334,7 @@ The target variable is:
 default
 ```
 
-Where:
+Target encoding:
 
 ```text
 0 → Non-Default
@@ -260,184 +343,176 @@ Where:
 
 ---
 
-# 📋 Important Dataset Features
+# 📋 Important Features
 
-The analysis uses important loan, borrower, financial, and credit-related variables.
-
-Examples include:
-
-| Feature               | Description                             |
-| --------------------- | --------------------------------------- |
-| `loan_amnt`           | Loan amount                             |
-| `term`                | Loan repayment term                     |
-| `int_rate`            | Interest rate                           |
-| `installment`         | Monthly installment                     |
-| `grade`               | Loan grade                              |
-| `sub_grade`           | Loan sub-grade                          |
-| `emp_length`          | Employment length                       |
-| `home_ownership`      | Home ownership status                   |
-| `annual_inc`          | Annual income                           |
-| `verification_status` | Income verification status              |
-| `purpose`             | Loan purpose                            |
-| `dti`                 | Debt-to-income ratio                    |
-| `delinq_2yrs`         | Delinquencies in the previous two years |
-| `inq_last_6mths`      | Credit inquiries                        |
-| `open_acc`            | Number of open accounts                 |
-| `pub_rec`             | Public record count                     |
-| `revol_bal`           | Revolving credit balance                |
-| `revol_util`          | Revolving credit utilization            |
-| `total_acc`           | Total credit accounts                   |
+| Feature               | Description                         |
+| --------------------- | ----------------------------------- |
+| `loan_amnt`           | Loan amount                         |
+| `term`                | Loan repayment term                 |
+| `int_rate`            | Interest rate                       |
+| `installment`         | Monthly installment                 |
+| `grade`               | Loan grade                          |
+| `sub_grade`           | Loan sub-grade                      |
+| `emp_length`          | Employment length                   |
+| `home_ownership`      | Home ownership status               |
+| `annual_inc`          | Annual income                       |
+| `verification_status` | Income verification status          |
+| `purpose`             | Loan purpose                        |
+| `dti`                 | Debt-to-income ratio                |
+| `delinq_2yrs`         | Delinquencies in previous two years |
+| `inq_last_6mths`      | Recent credit inquiries             |
+| `open_acc`            | Open credit accounts                |
+| `pub_rec`             | Public record count                 |
+| `revol_bal`           | Revolving balance                   |
+| `revol_util`          | Revolving utilization               |
+| `total_acc`           | Total credit accounts               |
 
 ---
 
 # ⚙️ Data Preprocessing
 
-The raw LendingClub dataset contains a large number of columns and records.
+The raw dataset contains a large number of columns and observations.
 
 The preprocessing pipeline includes:
 
 1. Selecting relevant variables
 2. Removing unnecessary columns
 3. Handling missing values
-4. Converting categorical variables
-5. Encoding categorical features
+4. Converting data types
+5. Encoding categorical variables
 6. Preparing numerical features
 7. Creating the final modeling dataset
-8. Separating target and predictor variables
+8. Separating predictors and target
 
-The processed data is then used for machine learning model development.
+The processed dataset is then used for model development and analytics.
 
 ---
 
 # 🔧 Feature Engineering
 
-Additional risk-oriented financial features were created to provide the models with more meaningful information about borrower financial behavior.
+Financial-risk features were engineered from existing variables to provide additional information about borrower financial burden and credit behavior.
 
 ### Loan-to-Income Ratio
 
-```text
+```python
 loan_to_income = loan_amnt / annual_inc
 ```
 
-Measures the size of the loan relative to the borrower's annual income.
+Measures the loan size relative to annual income.
 
 ### Installment-to-Income Ratio
 
-```text
+```python
 installment_to_income = installment / annual_inc
 ```
 
-Represents the monthly loan payment burden relative to income.
+Represents monthly payment burden relative to income.
 
 ### Open-to-Total Accounts Ratio
 
-```text
+```python
 open_to_total_accounts = open_acc / total_acc
 ```
 
-Provides information about the proportion of currently open credit accounts.
+Represents the proportion of currently open credit accounts.
 
 ### Credit Issue Count
 
-A combined indicator based on credit-related negative signals such as:
+Combines selected negative credit indicators such as:
 
 * Delinquencies
 * Public records
-* Recent inquiries
+* Recent credit inquiries
 
 ### Revolving Balance-to-Income Ratio
 
-```text
+```python
 revol_bal_to_income = revol_bal / annual_inc
 ```
 
-Provides an additional indicator of revolving credit burden relative to income.
+Provides an additional measure of revolving-credit burden relative to income.
 
 ---
 
-# ⚖️ Class Imbalance Handling
+# ⚖️ Handling Class Imbalance
 
-Loan-default prediction is an **imbalanced classification problem**.
+Loan-default prediction is an **imbalanced binary classification problem**.
 
-The dataset contains significantly more non-default observations than default observations.
+The minority class represents defaulted loans, while the majority class represents non-default loans.
 
-To improve the representation of the minority class during model training, the project uses:
+To improve minority-class representation during training, the project uses:
 
-### SMOTE
+## SMOTE
 
 **SMOTE — Synthetic Minority Over-sampling Technique**
 
-SMOTE generates synthetic minority-class observations instead of simply duplicating existing records.
-
-The workflow is:
+SMOTE creates synthetic examples of the minority class rather than simply duplicating existing observations.
 
 ```text
-Original Training Data
-        │
-        ▼
+Original Dataset
+       │
+       ▼
 Train / Test Split
-        │
-        ├──────────────► Test Data
-        │                 (Untouched)
-        ▼
-      SMOTE
-        │
-        ▼
-Balanced Training Data
-        │
-        ▼
+       │
+       ├──────────────► Test Set
+       │                Untouched
+       ▼
+     SMOTE
+       │
+       ▼
+Balanced Training Set
+       │
+       ▼
 Machine Learning
 ```
 
-The test dataset remains separate to provide an unbiased evaluation of model performance.
+**Important:** SMOTE is applied only to the training data so that the test set remains representative of unseen data.
 
 ---
 
 # 🤖 Machine Learning Models
 
-Three classification algorithms were trained and evaluated.
-
 ## 1. Logistic Regression
 
-Logistic Regression was used as a baseline classification model.
+Used as a baseline linear classification model.
 
-Advantages:
+**Strengths:**
 
 * Simple
-* Interpretable
 * Fast
-* Useful as a benchmark model
+* Interpretable
+* Useful benchmark
 
 ---
 
 ## 2. Random Forest
 
-Random Forest is an ensemble learning algorithm based on multiple decision trees.
+An ensemble of decision trees designed to capture nonlinear relationships and feature interactions.
 
-It can capture:
+**Strengths:**
 
-* Non-linear relationships
-* Feature interactions
-* Complex patterns in structured data
+* Handles nonlinear patterns
+* Captures feature interactions
+* Works well with structured data
 
 ---
 
 ## 3. XGBoost
 
-XGBoost is a gradient-boosting algorithm designed for high-performance classification and regression on structured/tabular datasets.
+A gradient-boosting algorithm designed for strong performance on structured/tabular datasets.
 
-It is particularly useful for:
+**Strengths:**
 
-* Complex relationships
-* Non-linear patterns
-* Feature interactions
-* Large tabular datasets
+* Captures complex relationships
+* Handles nonlinear patterns
+* Effective on tabular data
+* Provides strong predictive performance
 
 ---
 
 # 📈 Model Performance
 
-The models were evaluated on the held-out test dataset.
+Models were evaluated on the held-out test dataset.
 
 | Model               |   Accuracy |   F1 Score |    ROC-AUC |
 | ------------------- | ---------: | ---------: | ---------: |
@@ -447,326 +522,293 @@ The models were evaluated on the held-out test dataset.
 
 ---
 
-# 🔎 Model Performance Interpretation
+# 🧠 Model Selection Analysis
 
-The results demonstrate why multiple evaluation metrics are important in credit-risk classification.
+The model results demonstrate an important lesson in credit-risk classification.
 
 ### XGBoost
 
 XGBoost achieved:
 
-* Highest Accuracy: **80.32%**
-* Highest ROC-AUC: **71.94%**
+* **Highest Accuracy:** 80.32%
+* **Highest ROC-AUC:** 71.94%
 
-However, its F1 Score was only **13.58%**.
+However:
+
+* **F1 Score:** 13.58%
+
+The high accuracy combined with low F1 score indicates that accuracy alone does not adequately represent minority-class performance in this imbalanced problem.
 
 ### Random Forest
 
 Random Forest achieved:
 
-* Accuracy: **66.06%**
-* F1 Score: **43.07%**
-* ROC-AUC: **71.24%**
+* Accuracy: 66.06%
+* **F1 Score: 43.07%**
+* ROC-AUC: 71.24%
 
 ### Logistic Regression
 
 Logistic Regression achieved:
 
-* Accuracy: **66.10%**
-* F1 Score: **42.90%**
-* ROC-AUC: **70.84%**
+* Accuracy: 66.10%
+* F1 Score: 42.90%
+* ROC-AUC: 70.84%
 
-### Important Observation
+### Key Takeaway
 
-Accuracy alone is not sufficient for evaluating a credit-risk model, especially when the target classes are imbalanced.
+For a credit-risk application, model selection should not rely only on accuracy.
 
-A model can achieve high accuracy while still performing poorly at identifying actual defaults.
+Metrics such as:
 
-Therefore, **F1 Score, ROC-AUC, recall, precision, and threshold analysis** should also be considered when selecting a production credit-risk model.
+* Precision
+* Recall
+* F1 Score
+* ROC-AUC
+* Precision-Recall AUC
+* Classification threshold
+
+should be considered together with the business cost of false positives and false negatives.
+
+This project therefore treats the model comparison as an analytical exercise rather than claiming that the highest-accuracy model is automatically the best production model.
 
 ---
 
 # 🔍 Explainable AI with SHAP
 
-**SHAP — SHapley Additive exPlanations** is used to interpret machine learning predictions.
+**SHAP (SHapley Additive exPlanations)** is used to interpret machine-learning predictions.
 
-The purpose of SHAP analysis is to understand:
+SHAP helps answer questions such as:
 
-* Which features influence predictions
-* Which variables contribute to higher risk
-* Which variables contribute to lower risk
-* How individual predictions are formed
-* Overall feature importance
+* Which features influence model predictions?
+* Which features contribute toward higher predicted risk?
+* Which features contribute toward lower predicted risk?
+* Which variables are globally important?
+* Why did a specific observation receive a particular prediction?
 
 ---
 
 # 📊 SHAP Visualizations
 
-The project includes three major SHAP visualizations.
+## SHAP Feature Importance
 
-### SHAP Feature Importance
+Displays the relative importance of features used by the model.
 
-Shows the most influential features used by the model.
-
-### SHAP Summary Plot
-
-Provides a global overview of feature importance and the direction of feature influence.
-
-### SHAP Waterfall Plot
-
-Explains how individual features contribute to a specific prediction.
+![SHAP Feature Importance](screenshots/shap_feature_importance.png)
 
 ---
 
-# 🖥️ Streamlit Dashboard
+## SHAP Summary Plot
 
-The platform is deployed as an interactive Streamlit web application.
+Provides a global view of feature importance and feature impact across observations.
 
-### Application Structure
+![SHAP Summary](screenshots/shap_summary.png)
+
+---
+
+## SHAP Waterfall Plot
+
+Explains how individual features contribute to a specific prediction.
+
+![SHAP Waterfall](screenshots/shap_waterfall.png)
+
+---
+
+# 🖥️ Streamlit Application
+
+The platform contains four main application sections:
 
 ```text
-Home
- │
- ├── 📊 Executive Dashboard
- │
- ├── ⚠️ Risk Analytics
- │
- ├── 🤖 Model Performance
- │
- └── 🔮 Live Prediction
+🏠 Home
+   │
+   ├── 📊 Executive Dashboard
+   │
+   ├── ⚠️ Risk Analytics
+   │
+   ├── 🤖 Model Performance
+   │
+   └── 🔮 Live Prediction
 ```
 
 ---
 
 # 📊 Executive Risk Dashboard
 
-The Executive Dashboard provides a high-level view of the loan portfolio.
+The Executive Dashboard provides portfolio-level KPIs and risk insights.
 
-It includes:
-
-* Total loan applications
-* Defaulted loans
-* Default rate
-* Average loan amount
-* Default distribution
-* Grade-wise risk analysis
-* Portfolio-level visualizations
-
-![Executive Risk Dashboard](screenshots/executive_dashboard.png)
+![Executive Dashboard](screenshots/executive_dashboard.png)
 
 ---
 
 # ⚠️ Risk Analytics
 
-The Risk Analytics section provides deeper analysis of borrower and loan characteristics.
+The Risk Analytics page provides detailed analysis of loan and borrower characteristics.
 
-It helps identify relationships between:
-
-* Loan amount
-* Interest rate
-* Income
-* DTI
-* Credit utilization
-* Delinquencies
-* Credit inquiries
-* Loan grades
-
-![Risk Analytics Dashboard](screenshots/risk_analytics.png)
+![Risk Analytics](screenshots/risk_analytics.png)
 
 ---
 
-# 🤖 Model Performance Dashboard
+# 🤖 Model Performance
 
-The Model Performance page compares the trained classification models using key evaluation metrics.
+The Model Performance dashboard presents comparative model evaluation metrics.
 
-![Model Performance Dashboard](screenshots/model_performance.png)
+![Model Performance](screenshots/model_performance.png)
 
 ---
 
 # 🔮 Live Risk Prediction
 
-The Live Prediction page allows users to enter applicant-level loan information and generate a model-based risk prediction.
+The Live Prediction dashboard provides applicant-level risk prediction using the trained machine-learning pipeline.
 
-The workflow is:
+![Live Prediction](screenshots/live_prediction.png)
+
+---
+
+# 🗄️ SQL Business Analytics
+
+SQL is used as part of the analytics workflow to perform business-oriented analysis.
+
+Example use cases include:
+
+* Default analysis by loan grade
+* Average loan amount
+* Default counts
+* Portfolio aggregation
+* Risk segmentation
+* Borrower-level analysis
+* Financial metric analysis
+
+SQL provides an additional analytical layer between raw data and business insights.
+
+---
+
+# 🏗️ System Architecture
 
 ```text
-Applicant Information
-        ↓
-Feature Processing
-        ↓
-Feature Scaling
-        ↓
-Trained ML Model
-        ↓
-Risk Prediction
-```
-
-![Live Prediction Dashboard](screenshots/live_prediction.png)
-
----
-
-# 🔍 SHAP Feature Importance
-
-The SHAP feature-importance visualization highlights the variables that have the greatest influence on the model.
-
-![SHAP Feature Importance](screenshots/shap_feature_importance.png)
-
----
-
-# 📈 SHAP Summary Plot
-
-The SHAP summary plot provides a global explanation of model behavior across observations.
-
-![SHAP Summary Plot](screenshots/shap_summary.png)
-
----
-
-# 🧩 SHAP Waterfall Plot
-
-The SHAP waterfall visualization explains the contribution of individual features for a specific model prediction.
-
-![SHAP Waterfall Plot](screenshots/shap_waterfall.png)
-
----
-
-# 🔄 End-to-End Project Workflow
-
-```text
-                 ┌──────────────────┐
-                 │   LendingClub    │
-                 │    Loan Data     │
-                 └────────┬─────────┘
-                          │
-                          ▼
-                 ┌──────────────────┐
-                 │ Data Cleaning &  │
-                 │ Preprocessing    │
-                 └────────┬─────────┘
-                          │
-                          ▼
-                 ┌──────────────────┐
-                 │ Exploratory Data │
-                 │     Analysis     │
-                 └────────┬─────────┘
-                          │
-                          ▼
-                 ┌──────────────────┐
-                 │ Feature          │
-                 │ Engineering      │
-                 └────────┬─────────┘
-                          │
-                          ▼
-                 ┌──────────────────┐
-                 │ Train / Test     │
-                 │     Split        │
-                 └────────┬─────────┘
-                          │
-                          ▼
-                 ┌──────────────────┐
-                 │      SMOTE       │
-                 │ Training Data    │
-                 └────────┬─────────┘
-                          │
-                          ▼
-              ┌───────────┼───────────┐
-              ▼           ▼           ▼
-        Logistic      Random       XGBoost
-        Regression    Forest
-              │           │           │
-              └───────────┼───────────┘
-                          ▼
-                 ┌──────────────────┐
-                 │ Model Evaluation │
-                 └────────┬─────────┘
-                          │
-                          ▼
-                 ┌──────────────────┐
-                 │ SHAP             │
-                 │ Explainability   │
-                 └────────┬─────────┘
-                          │
-                          ▼
-                 ┌──────────────────┐
-                 │ Streamlit        │
-                 │ Dashboard        │
-                 └────────┬─────────┘
-                          │
-                          ▼
-                 ┌──────────────────┐
-                 │ Live Risk        │
-                 │ Prediction       │
-                 └──────────────────┘
+                         ┌──────────────────────┐
+                         │   LendingClub Data   │
+                         └──────────┬───────────┘
+                                    │
+                    ┌───────────────▼───────────────┐
+                    │ Data Cleaning & Preprocessing │
+                    └───────────────┬───────────────┘
+                                    │
+                    ┌───────────────▼───────────────┐
+                    │ Exploratory Data Analysis     │
+                    └───────────────┬───────────────┘
+                                    │
+                    ┌───────────────▼───────────────┐
+                    │ Feature Engineering           │
+                    └───────────────┬───────────────┘
+                                    │
+              ┌─────────────────────▼─────────────────────┐
+              │             Train / Test Split            │
+              └─────────────────────┬─────────────────────┘
+                                    │
+                              ┌─────▼─────┐
+                              │   SMOTE   │
+                              └─────┬─────┘
+                                    │
+              ┌─────────────────────▼─────────────────────┐
+              │              ML Model Layer               │
+              │                                            │
+              │ Logistic Regression | Random Forest       │
+              │ XGBoost                                      │
+              └─────────────────────┬─────────────────────┘
+                                    │
+                    ┌───────────────▼───────────────┐
+                    │ Model Evaluation              │
+                    └───────────────┬───────────────┘
+                                    │
+                    ┌───────────────▼───────────────┐
+                    │ SHAP Explainability            │
+                    └───────────────┬───────────────┘
+                                    │
+              ┌─────────────────────▼─────────────────────┐
+              │          Streamlit Application            │
+              │                                             │
+              │ Executive | Risk | Models | Prediction    │
+              └─────────────────────┬─────────────────────┘
+                                    │
+                                    ▼
+                          Credit-Risk Insights
 ```
 
 ---
 
-# 💼 Business Problems Addressed
+# 🔄 End-to-End Workflow
 
-The platform demonstrates how machine learning and analytics can help address several credit-risk problems.
+```text
+Data Collection
+      ↓
+Data Cleaning
+      ↓
+Exploratory Data Analysis
+      ↓
+Feature Engineering
+      ↓
+Train/Test Split
+      ↓
+SMOTE
+      ↓
+Model Training
+      ↓
+Model Evaluation
+      ↓
+SHAP Explainability
+      ↓
+Streamlit Dashboard
+      ↓
+Live Risk Prediction
+```
 
-### Risk Identification
+---
 
-Identify applicants and loan characteristics associated with higher default risk.
+# 💼 Business Use Cases
+
+The platform demonstrates potential applications in:
+
+### Credit-Risk Assessment
+
+Identify loan applications that may require additional review.
 
 ### Portfolio Monitoring
 
-Monitor default rates and risk patterns across different loan segments.
+Monitor default rates and risk patterns across loan segments.
 
-### Customer Assessment
+### Risk Segmentation
 
-Analyze borrower financial and credit characteristics.
+Analyze risk according to borrower and loan characteristics.
 
 ### Decision Support
 
-Provide data-driven information that can support credit-risk assessment.
+Provide analytical information that can assist credit-risk teams.
 
-### Explainability
+### Explainable Decision Support
 
-Help analysts understand why a model produces a particular prediction.
+Use SHAP to understand factors influencing model predictions.
 
-### Scalability
+### Large-Scale Analysis
 
-Automate parts of the risk-analysis process for large loan datasets.
+Automate analysis across large historical loan datasets.
 
 ---
 
-# 📊 Key Business Insights
-
-The platform can be used to investigate questions such as:
+# 📊 Questions the Platform Can Help Answer
 
 * Which loan grades have higher default rates?
 * How does loan amount relate to default risk?
-* Does higher debt-to-income ratio correspond to higher risk?
-* Which borrower financial characteristics influence predictions?
-* Which features are most important to the machine learning model?
-* How do different classification algorithms perform?
-* How can model predictions be explained to analysts?
-
----
-
-# 🗄️ SQL Analysis
-
-SQL is incorporated into the project for business-oriented analysis of loan data.
-
-Example analytical use cases include:
-
-* Default analysis by loan grade
-* Loan portfolio aggregation
-* Average loan amount
-* Default counts
-* Risk segmentation
-* Borrower-level aggregation
-* Financial metric analysis
-
-SQL helps bridge the gap between raw data and business decision-making.
+* How does debt-to-income ratio relate to risk?
+* Which financial variables are most influential?
+* Which model performs better under different metrics?
+* What factors contribute to a particular prediction?
+* How does borrower credit behavior relate to default risk?
 
 ---
 
 # 💾 Model Persistence
 
-Trained machine learning models and preprocessing objects are saved using **Joblib**.
-
-Stored model artifacts include:
+Trained models and preprocessing objects are persisted using **Joblib**.
 
 ```text
 models/
@@ -777,11 +819,11 @@ models/
 └── scaler.pkl
 ```
 
-This allows the Streamlit application to load trained models without retraining them every time the application starts.
+This allows the deployed Streamlit application to load trained artifacts without retraining the models each time.
 
 ---
 
-# 🚀 How to Run Locally
+# 🚀 Run Locally
 
 ## 1. Clone the Repository
 
@@ -789,17 +831,19 @@ This allows the Streamlit application to load trained models without retraining 
 git clone https://github.com/aditya280505/Credit-Risk-Intelligence-Platform.git
 ```
 
+## 2. Navigate to the Project
+
 ```bash
 cd Credit-Risk-Intelligence-Platform
 ```
 
-## 2. Create a Virtual Environment
+## 3. Create a Virtual Environment
 
 ```bash
 python -m venv .venv
 ```
 
-## 3. Activate the Environment
+## 4. Activate the Environment
 
 ### Windows PowerShell
 
@@ -813,115 +857,152 @@ python -m venv .venv
 .venv\Scripts\activate
 ```
 
-## 4. Install Dependencies
+## 5. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## 5. Run the Streamlit Application
+## 6. Run the Application
 
 ```bash
 streamlit run app/Home.py
 ```
 
-The application will open in your default web browser.
+The application will open in your browser.
 
 ---
 
-# 🌐 Online Application
+# 📸 Dashboard Gallery
 
-The project is deployed using Streamlit.
+### Executive Dashboard
 
-### 🚀 Live Demo
+![Executive Dashboard](screenshots/executive_dashboard.png)
 
-https://aditya280505-credit-risk-intelligence-platform-apphome-gqpygr.streamlit.app/
+### Risk Analytics
 
-### 💻 GitHub Repository
+![Risk Analytics](screenshots/risk_analytics.png)
 
-https://github.com/aditya280505/Credit-Risk-Intelligence-Platform
+### Model Performance
+
+![Model Performance](screenshots/model_performance.png)
+
+### Live Prediction
+
+![Live Prediction](screenshots/live_prediction.png)
+
+### SHAP Feature Importance
+
+![SHAP Feature Importance](screenshots/shap_feature_importance.png)
+
+### SHAP Summary
+
+![SHAP Summary](screenshots/shap_summary.png)
+
+### SHAP Waterfall
+
+![SHAP Waterfall](screenshots/shap_waterfall.png)
+
+---
+
+# ⚠️ Limitations
+
+This project is an educational and portfolio demonstration.
+
+Current limitations include:
+
+* The dataset is historical rather than real-time.
+* Model performance depends on the available features and data quality.
+* Accuracy can be misleading for imbalanced classification.
+* The current evaluation does not represent production credit underwriting validation.
+* Classification thresholds have not been fully optimized for a specific business cost matrix.
+* Production deployment would require extensive model validation and monitoring.
+* Real-world lending systems require regulatory, fairness, privacy, security, and governance controls.
+
+---
+
+# 🔐 Disclaimer
+
+> **This project is developed for educational, analytical, and portfolio demonstration purposes. Predictions generated by this application should not be used as the sole basis for real-world lending, financial, or credit decisions.**
 
 ---
 
 # 🔮 Future Improvements
 
-The platform can be further improved with:
+Planned improvements include:
 
+* Hyperparameter optimization
 * Minority-class recall optimization
 * F1-score optimization
-* Hyperparameter tuning
 * Probability calibration
-* Optimal classification threshold selection
-* Precision-Recall analysis
-* Additional credit-risk metrics
+* Classification threshold optimization
+* Precision-Recall AUC analysis
+* Cost-sensitive learning
 * Model monitoring
 * Data drift detection
 * Automated model retraining
 * Real-time prediction API
 * Cloud database integration
-* Real-time loan data integration
+* Real-time loan-data integration
 * Advanced risk segmentation
-* Customer churn/default prediction
 * Model governance and audit logging
+* Fairness and bias evaluation
+* Production-grade authentication and authorization
 
 ---
 
 # 🎓 Learning Outcomes
 
-This project demonstrates practical experience with:
+This project demonstrates hands-on experience with:
 
-* Python for data analytics
-* Pandas and NumPy
-* Data preprocessing
-* Exploratory data analysis
-* Feature engineering
-* SQL analytics
-* Classification algorithms
+* Python
+* Pandas
+* NumPy
+* Data Cleaning
+* Exploratory Data Analysis
+* Feature Engineering
+* SQL
+* Logistic Regression
 * Random Forest
 * XGBoost
-* Logistic Regression
-* Imbalanced learning
 * SMOTE
-* Model evaluation
-* ROC-AUC
+* Imbalanced Classification
+* Model Evaluation
 * F1 Score
+* ROC-AUC
 * Explainable AI
 * SHAP
 * Streamlit
-* Git and GitHub
-* Machine learning deployment
+* Joblib
+* Git
+* GitHub
+* Machine Learning Deployment
 
 ---
 
 # 🧠 Skills Demonstrated
 
 ```text
-Python
-   │
-   ├── Data Cleaning
-   ├── EDA
-   ├── Feature Engineering
-   └── Machine Learning
-           │
-           ├── Logistic Regression
-           ├── Random Forest
-           └── XGBoost
-
-SQL
-   │
-   └── Business Analytics
-
-Explainable AI
-   │
-   └── SHAP
-
-Deployment
-   │
-   └── Streamlit
-
-Version Control
-   │
-   └── Git + GitHub
+                    CREDIT RISK INTELLIGENCE
+                              │
+          ┌───────────────────┼───────────────────┐
+          ▼                   ▼                   ▼
+     DATA ANALYTICS      MACHINE LEARNING     EXPLAINABLE AI
+          │                   │                   │
+      Pandas/NumPy       Logistic Regression      SHAP
+      EDA                Random Forest
+      Feature Eng.       XGBoost
+          │                   │
+          ▼                   ▼
+        SQL               SMOTE
+          │                   │
+          └──────────┬────────┘
+                     ▼
+             STREAMLIT DASHBOARD
+                     │
+          ┌──────────┼──────────┐
+          ▼          ▼          ▼
+      Analytics   Evaluation  Prediction
 ```
 
 ---
@@ -959,28 +1040,38 @@ https://linkedin.com/in/adityaborgaonkar280505/
 
 # ⭐ Project Goal
 
-The goal of this project is to demonstrate an **end-to-end Credit Risk Intelligence Platform** that combines:
+The goal of this project is to demonstrate how **data analytics, SQL, machine learning, imbalanced learning, explainable AI, and interactive dashboards** can be integrated into a single credit-risk intelligence platform.
 
-**Data Analytics + SQL + Machine Learning + Imbalanced Learning + Explainable AI + Interactive Dashboards**
+The project focuses on the complete journey from:
 
-The project demonstrates how historical loan data can be transformed into meaningful risk insights and machine learning predictions through a complete analytics pipeline.
+```text
+Raw Data
+   ↓
+Analytics
+   ↓
+Feature Engineering
+   ↓
+Machine Learning
+   ↓
+Model Evaluation
+   ↓
+Explainability
+   ↓
+Interactive Dashboard
+   ↓
+Risk Prediction
+```
 
 ---
 
-# ⭐ Support
-
-If you found this project useful, consider giving the repository a **⭐ Star** on GitHub.
-
-It helps others discover the project and supports continued development.
-
----
-
-## 🚀 Explore the Project
+# 🚀 Explore the Project
 
 [![🚀 Open Live Dashboard](https://img.shields.io/badge/🚀%20OPEN%20LIVE%20DASHBOARD-success?style=for-the-badge)](https://aditya280505-credit-risk-intelligence-platform-apphome-gqpygr.streamlit.app/)
 
-[![💻 View on GitHub](https://img.shields.io/badge/💻%20VIEW%20ON%20GITHUB-black?style=for-the-badge\&logo=github)](https://github.com/aditya280505/Credit-Risk-Intelligence-Platform)
+[![💻 View GitHub Repository](https://img.shields.io/badge/💻%20VIEW%20GITHUB%20REPOSITORY-black?style=for-the-badge\&logo=github)](https://github.com/aditya280505/Credit-Risk-Intelligence-Platform)
 
 ---
 
-**Built with Python, Machine Learning, SQL, SHAP, and Streamlit.**
+### ⭐ If you found this project useful, consider giving the repository a Star!
+
+**Built with Python • SQL • Machine Learning • SMOTE • SHAP • Streamlit**
